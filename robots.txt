@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://timmgries.github.io/sitemap.xml
