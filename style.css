@@ -1,0 +1,106 @@
+/* Timm Gries - academic site, v0.3.
+   Left rail (photo + identity) / right column (about, papers), the classic
+   academic two-column. Square photo corners per author. Light-committed,
+   Palatino to match the job-market packet, navy accent, no hairline rules.
+   Deliberately NOT PaperMod (cohort-mate uses it), not a link-dense layout. */
+
+:root {
+  --ink: #1c1c1c;
+  --muted: #6b6b6b;
+  --navy: #1d3a56;
+  --bg: #fdfdfc;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
+  font-size: 17.5px;
+  line-height: 1.6;
+}
+
+main {
+  max-width: 64rem;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 4.5rem;
+  align-items: start;
+  /* float the block mid-viewport on tall screens (the Nina move that
+     makes a short page feel airy instead of top-crowded) */
+  min-height: 100svh;
+  align-content: center;
+}
+
+/* ------- left rail ------- */
+.photo {
+  width: 100%;
+  height: auto;
+  border-radius: 0;          /* square corners, per author */
+  display: block;
+}
+
+.rail h1 {
+  margin: 1.1rem 0 0.35rem;
+  font-size: 1.55rem;
+  font-weight: 600;
+  letter-spacing: 0.005em;
+}
+
+.affil {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.45;
+}
+
+.affilnote { margin: 0.7rem 0 0; color: var(--muted); font-size: 0.9rem; line-height: 1.5; }
+
+.raillink { margin: 0.55rem 0 0; font-size: 0.95rem; }
+.raillink + .raillink { margin-top: 0.15rem; }
+
+/* ------- right column ------- */
+.content section { margin: 0 0 3rem; }
+
+h2 {
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  color: var(--muted);
+  margin: 0 0 1rem;
+}
+
+#about p { margin: 0 0 0.95rem; max-width: 38rem; }
+
+ul.papers { list-style: none; margin: 0; padding: 0; }
+ul.papers li { margin: 0 0 1.5rem; }
+.title { display: block; font-weight: 600; font-size: 1.1rem; }
+.coauthors { display: block; color: var(--muted); font-style: italic; }
+.tag {
+  display: inline-block;
+  margin-top: 0.15rem;
+  color: var(--navy);
+  font-variant: small-caps;
+  letter-spacing: 0.04em;
+}
+.note { display: block; color: var(--muted); font-size: 0.95rem; margin-top: 0.2rem; }
+
+a { color: var(--navy); text-decoration: none; border-bottom: 1px solid #b9c6d2; }
+a:hover { border-bottom-color: var(--navy); }
+
+footer { color: var(--muted); font-size: 0.85rem; }
+
+/* ------- small screens: stack, rail first ------- */
+@media (max-width: 700px) {
+  main {
+    grid-template-columns: 1fr;
+    gap: 2.2rem;
+    padding-top: 2.6rem;
+  }
+  .photo { max-width: 190px; }
+}
