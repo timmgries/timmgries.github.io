@@ -17,9 +17,9 @@
     <p class="affil">PhD Candidate in Economics<br>Bocconi University</p>
     <p class="affilnote">Affiliated with <a href="https://leap.unibocconi.eu/">LEAP</a> and
       <a href="https://thenormallab.uchicago.edu/">The Normal Lab</a></p>
-    <!-- ITERATION 2 (per author): CV link goes here.
-    <p class="raillink"><a href="assets/gries-cv.pdf">Curriculum Vitae</a></p>
-    -->
+    <!-- CV: assets/gries-cv.pdf, compiled from CV_timm_2026_07/CV_academic.tex.
+         To update: recompile there, re-copy, push. To remove: delete the line + file. -->
+    <p class="raillink"><a href="assets/gries-cv.pdf">Curriculum Vitae (PDF)</a></p>
     <p class="raillink"><a href="mailto:griestimm@gmail.com">griestimm@gmail.com</a></p>
     <!-- Staleness clock: institutional address - remove after the PhD (Jan 2027). -->
     <p class="raillink"><a href="mailto:timm.gries@phd.unibocconi.it">timm.gries@phd.unibocconi.it</a></p>
@@ -43,9 +43,11 @@
     <section id="papers">
       <h2>Working papers</h2>
       <ul class="papers">
-        <!-- TO ADD OR EDIT A PAPER: copy one <li> block. To link a PDF, drop the file in
-             papers/ (convention: gries-shorttitle.pdf) and swap the "note" line for:
-             <span class="links"><a href="papers/gries-shorttitle.pdf">PDF</a></span> -->
+        <!-- TO ADD OR EDIT A PAPER: copy one <li> block. PDFs live in papers/
+             (convention: gries-shorttitle.pdf); the link sits in the "note" span.
+             Abstracts are <details class="abstract"> - plain HTML, no JS.
+             TO REMOVE A PDF: delete the file, swap the note line back to
+             "Draft available upon request.", drop the <details> block, push. -->
         <li>
           <span class="title">Respect-Based Reciprocity</span>
           <span class="tag">Job Market Paper</span>
@@ -55,13 +57,44 @@
         </li>
         <li>
           <span class="title">News Norms</span>
-          <span class="note">Draft available upon request.</span>
+          <span class="note"><a href="papers/gries-newsnorms.pdf">Draft (PDF)</a></span>
+          <!-- Abstract verbatim from the 2026-09-24 draft (260820_WP_RBRstyle.pdf). -->
+          <details class="abstract">
+            <summary>Abstract</summary>
+            <p>Collective choices such as democratic decision-making run on attention, but
+            attention to public affairs is often socially valuable and privately costly. This
+            paper studies news norms, social expectations that &ldquo;a good citizen stays
+            informed&rdquo;, and shows how they raise demand for political information through
+            social image. In a pre-registered experiment, making political knowledge observable
+            to peers increases willingness to pay for political news by about 21%. The effect is
+            larger when participants believe their audience cares about being informed and can
+            evaluate knowledge. Cross-national survey evidence shows that news norms are widely
+            perceived and display systematic socioeconomic gradients. Together, the results
+            identify a mechanism through which social environments can increase political
+            information acquisition and contribute to persistent inequalities in political
+            knowledge and political voice.</p>
+          </details>
         </li>
         <li>
           <span class="title">Meritocratic Hubris? (Over)-Confidence and Fairness Views</span>
           <span class="coauthors">with Rapha&euml;lle Aulagnon</span>
-          <span class="note">Draft available upon request.
+          <span class="note"><a href="papers/gries-hubris.pdf">Draft (PDF)</a> &middot;
             <a href="https://www.hks.harvard.edu/centers/cid/voices/confidence-factor-how-our-beliefs-shape-attitudes-towards-fairness-and">Harvard CID overview</a></span>
+          <!-- Abstract verbatim from the 2026-09-24 draft (260820_Hubris_RBRstyle.pdf). -->
+          <details class="abstract">
+            <summary>Abstract</summary>
+            <p>Feedback and evaluations shape modern life and are increasingly inflated across
+            educational, professional, and digital systems. We hypothesize that inflated
+            feedback, by boosting confidence, shifts fairness perceptions toward greater
+            acceptance of inequality, even absent any material stake. In a preregistered online
+            experiment with a US-representative sample, we subtly inflate performance feedback
+            for identical test performances, which raises both overestimation and overplacement.
+            Acting as impartial spectators, treated participants redistribute significantly less
+            to lower-performing workers, reducing the extent of redistribution by about 14%. The
+            effect is strongest among those who attribute performance to skill and effort, and
+            text analysis points to motivated attention to performance as the operative
+            channel.</p>
+          </details>
         </li>
       </ul>
     </section>

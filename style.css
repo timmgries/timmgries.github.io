@@ -93,6 +93,24 @@ ul.papers li { margin: 0 0 1.5rem; }
 a { color: var(--navy); text-decoration: none; border-bottom: 1px solid #b9c6d2; }
 a:hover { border-bottom-color: var(--navy); }
 
+/* Expandable abstracts on paper rows: plain <details>, no JS. The summary reads
+   as a link (navy, like <a>) and the default disclosure marker is KEPT - it is the
+   affordance that says "this opens in place" rather than navigating away. */
+details.abstract { margin-top: 0.25rem; max-width: 38rem; }
+details.abstract summary {
+  cursor: pointer;
+  color: var(--navy);
+  font-size: 0.95rem;
+  width: fit-content;
+}
+details.abstract summary:hover { text-decoration: underline; }
+details.abstract p {
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.55;
+  margin: 0.35rem 0 0;
+}
+
 footer { color: var(--muted); font-size: 0.85rem; }
 
 /* ------- small screens: stack, rail first ------- */
